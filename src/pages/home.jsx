@@ -6,20 +6,19 @@ import {
   Typography,
   Button,
   IconButton,
-  Input,
-  Textarea,
-  Checkbox,
+
 } from "@material-tailwind/react";
 import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
+import { PageTitle } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import WhatsAppButton from "@/widgets/WhatsAppButton";
 
 export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/2151202426.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -65,7 +64,7 @@ export function Home() {
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                Working with us is a pleasure
+                Quem é Talita Santos
               </Typography>
               <Typography className="mb-8 font-normal text-blue-gray-500">
                 Don't let your uses guess by attaching tooltips and popoves to
@@ -81,14 +80,14 @@ export function Home() {
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
-                <CardHeader floated={false} className="relative h-56">
+                <CardHeader floated={false} className="relative h-80px mb-3 mt-2 font-bold">
                   <img
                     alt="Card Image"
-                    src="/img/teamwork.png"
+                    src="/img/people.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
-                <CardBody>
+                {/* <CardBody>
                   <Typography variant="small" color="blue-gray" className="font-normal">Enterprise</Typography>
                   <Typography
                     variant="h5"
@@ -102,13 +101,13 @@ export function Home() {
                     sea-ice then thaws every summer, and that process will
                     continue whatever happens.
                   </Typography>
-                </CardBody>
+                </CardBody> */}
               </Card>
             </div>
           </div>
         </div>
       </section>
-      <section className="px-4 pt-20 pb-48">
+      {/* <section className="px-4 pt-20 pb-48">
         <div className="container mx-auto">
           <PageTitle section="Our Team" heading="Here are our heroes">
             According to the National Oceanic and Atmospheric Administration,
@@ -135,7 +134,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
           <PageTitle section="Co-Working" heading="Build something">
@@ -165,42 +164,13 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle section="Contact Us" heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
-          </PageTitle>
-          <form className="mx-auto w-full mt-12 lg:w-5/12">
-            <div className="mb-8 flex gap-8">
-              <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
-            </div>
-            <Textarea variant="outlined" size="lg" label="Message" rows={8} />
-            <Checkbox
-              label={
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="flex items-center font-normal"
-                >
-                  I agree the
-                  <a
-                    href="#"
-                    className="font-medium transition-colors hover:text-gray-900"
-                  >
-                    &nbsp;Terms and Conditions
-                  </a>
-                </Typography>
-              }
-              containerProps={{ className: "-ml-2.5" }}
-            />
-            <Button variant="gradient" size="lg" className="mt-8" fullWidth>
-              Send Message
-            </Button>
-          </form>
+          
         </div>
       </section>
-      <div className="bg-white">
+      <WhatsAppButton />
+      {/* <div className="bg-white">
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 }
