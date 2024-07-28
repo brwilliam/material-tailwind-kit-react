@@ -1,25 +1,22 @@
 import React from "react";
 import {
-  Card,
-  CardBody,
+  Card, 
   CardHeader,
   Typography,
-  Button,
-  IconButton,
+  Button,  
 
 } from "@material-tailwind/react";
-import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle } from "@/widgets/layout";
-import { FeatureCard, TeamCard } from "@/widgets/cards";
-import { featuresData, teamData, contactData } from "@/data";
+import { FingerPrintIcon } from "@heroicons/react/24/solid";;
+import { FeatureCard } from "@/widgets/cards";
+import { featuresData, contactData } from "@/data";
 import WhatsAppButton from "@/widgets/WhatsAppButton";
 
 export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/2151202426.jpg')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/40 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/background-balance.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-black/80 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -29,7 +26,6 @@ export function Home() {
                 className="mb-6 font-black"
               >
                 Defendendo seus direitos com excelência e compromisso
-                .
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
               Atendimento humanizado, pautado pela ética e transparência. Nossa missão é compreender suas necessidades e buscar soluções jurídicas eficazes, sempre com respeito e dedicação.
@@ -66,16 +62,19 @@ export function Home() {
                 Quem é Talita Santos
               </Typography>
               <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
+                Advogada inscrita nos quadros da Ordem Dos Advogados sob nº 511.960.
                 <br />
                 <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+                Graduada em Direito pela Universidade do Oeste Paulista e pós-graduanda em direito de Previdenciário pela Legale.
+                <br />
+                <br />
+                Sua atuação se estende as áreas de Direito Penal e Direito Trabalhista, em parceria com time especializado.
+                <br />
+                <br />
+                Seu compromisso com a excelência se reflete em uma abordagem personalizada, onde cada caso é tratado com a devida atenção e cuidado, proporcionando soluções jurídicas eficazes e seguras para nossos clientes.
+
               </Typography>
-              <Button variant="filled">read more</Button>
+              <Button variant="filled">Fale conosco</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
@@ -86,61 +85,16 @@ export function Home() {
                     className="h-full w-full"
                   />
                 </CardHeader>
-                {/* <CardBody>
-                  <Typography variant="small" color="blue-gray" className="font-normal">Enterprise</Typography>
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-3 mt-2 font-bold"
-                  >
-                    Top Notch Services
-                  </Typography>
-                  <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-                  </Typography>
-                </CardBody> */}
+                
               </Card>
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="px-4 pt-20 pb-48">
+      
+      <section className="relative bg-gray-400 py-24 px-4">
         <div className="container mx-auto">
-          <PageTitle section="Our Team" heading="Here are our heroes">
-            According to the National Oceanic and Atmospheric Administration,
-            Ted, Scambos, NSIDClead scentist, puts the potentially record
-            maximum.
-          </PageTitle>
-          <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-            {teamData.map(({ img, name, position, socials }) => (
-              <TeamCard
-                key={name}
-                img={img}
-                name={name}
-                position={position}
-                socials={
-                  <div className="flex items-center gap-2">
-                    {socials.map(({ color, name }) => (
-                      <IconButton key={name} color={color} variant="text">
-                        <i className={`fa-brands text-xl fa-${name}`} />
-                      </IconButton>
-                    ))}
-                  </div>
-                }
-              />
-            ))}
-          </div>
-        </div>
-      </section> */}
-      <section className="relative bg-white py-24 px-4">
-        <div className="container mx-auto">
-          <PageTitle section="Co-Working" heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
-          </PageTitle>
+          
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
@@ -157,7 +111,7 @@ export function Home() {
                 <Typography variant="h5" color="blue-gray" className="mb-2">
                   {title}
                 </Typography>
-                <Typography className="font-normal text-blue-gray-500">
+                <Typography className="font-normal text-blue-gray-900">
                   {description}
                 </Typography>
               </Card>

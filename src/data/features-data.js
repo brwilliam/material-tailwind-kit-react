@@ -1,28 +1,30 @@
 import {
-  ChatBubbleBottomCenterTextIcon,
+  UsersIcon,
+  BriefcaseIcon,
+  ShieldCheckIcon, 
 } from "@heroicons/react/24/solid";
 
 export const featuresData = [
   {
     color: "gray",
     title: "Previdenciário",
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: UsersIcon,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "Aposentadorias, auxílio acidente, auxílio reclusão, auxílio-doença, pensão por morte, LOAS, auxílio maternidade e planejamento previdenciário.",
   },
   {
     color: "gray",
     title: "Trabalhista",
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: BriefcaseIcon,
     description:
-      "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.",
+      "Rescisão trabalhista, carteira assinada, periculosidade ou insalubridade, adicional noturno, pagamento de valores devidos e danos morais.",
   },
   {
     color: "gray",
     title: "Criminalista",
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: ShieldCheckIcon,
     description:
-      "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!",
+      "Flagrantes, defesas em fase inicial e recursal, revisão criminal, progressão de regime e liberdade condicional.",
   },
 ];
 
